@@ -74,7 +74,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 99
+  controlID: 54
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,7 +223,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 45
+  controlID: 55
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -352,14 +352,14 @@ MonoBehaviour:
     m_KeySerializationHelper:
     - {fileID: 1107885720581089522, guid: 1608c78829b225a42aa0a8d3d03674b5, type: 2}
     m_ValueSerializationHelper:
-    - e00: 0.46215987
+    - e00: 0.58970296
       e01: 0
       e02: 0
-      e03: 135.34805
+      e03: 11.75531
       e10: 0
-      e11: 0.46215987
+      e11: 0.58970296
       e12: 0
-      e13: 72.99887
+      e13: 105.76901
       e20: 0
       e21: 0
       e22: 1
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_MiniTool: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_CurrentEditor: 0
+  m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
 --- !u!114 &14
@@ -432,7 +432,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/POLYART_Ancient Village/Prefabs
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -440,16 +440,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/POLYART_Ancient Village/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\GIGABYTE\amazighs\tayrilegacy
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 51}
-    m_SelectedIDs: 12000100
-    m_LastClickedID: 65554
-    m_ExpandedIDs: 000000001200010014000100160001005602010000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: cc230100
+    m_LastClickedID: 74700
+    m_ExpandedIDs: 00000000f8ff0000faff0000fcff0000280201003202010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -477,7 +477,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000120001001400010016000100
+    m_ExpandedIDs: 00000000f8ff0000faff0000fcff0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000000000000861000004610000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -571,7 +571,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: -160
+    m_CachedPref: -426.40002
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
@@ -619,9 +619,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 3a750000
       m_LastClickedID: 0
-      m_ExpandedIDs: 0ca4feff0ea7feff6cb3feff26fbffff
+      m_ExpandedIDs: 26fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1030,7 +1030,7 @@ MonoBehaviour:
   m_Position:
     m_Target: {x: 40.179943, y: 43.582447, z: -0.700824}
     speed: 2
-    m_Value: {x: 40.179943, y: 43.582447, z: -0.700824}
+    m_Value: {x: -0.8027978, y: 5.6353717, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1080,7 +1080,7 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.02234542, y: 0.9377396, z: -0.06142462, w: 0.34113362}
   m_Size:
-    m_Target: 1.373309
+    m_Target: 1.435108
     speed: 2
     m_Value: 1.373309
   m_Ortho:
