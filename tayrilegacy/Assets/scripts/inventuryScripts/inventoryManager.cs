@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class inventoryManager : MonoBehaviour
 {
@@ -23,6 +24,11 @@ public class inventoryManager : MonoBehaviour
     }
     public void ListItems()
     {
+        foreach (Transform item in itemContent)
+        {
+            Destroy(item.gameObject);
+        }
+
         foreach (var item in items)
         {
             GameObject obj = Instantiate(inventoryItem, itemContent);
