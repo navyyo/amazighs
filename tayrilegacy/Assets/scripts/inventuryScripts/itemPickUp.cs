@@ -14,5 +14,6 @@ public class itemPickUp : MonoBehaviour
     private void OnMouseDown()
     {
         PickUp();
+        Debug.Log("fuck you all");
     }
 }
