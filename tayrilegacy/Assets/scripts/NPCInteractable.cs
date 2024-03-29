@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DialogueEditor;
 
 public class NPCInteractable : MonoBehaviour
 {
     // Start is called before the first frame update
+    [SerializeField] private NPCConversation myConversation;
     private Animator animator;
     private void Awake()
     {
@@ -12,7 +14,7 @@ public class NPCInteractable : MonoBehaviour
     }
     public void Interact()
     {
-        ChatBubble3D.Create(transform.transform, new Vector3(-.3f, 1.7f, 0f), ChatBubble3D.IconType.Happy, "hello there!");
+        ConversationManager.Instance.StartConversation(myConversation);
         animator.SetTrigger("talk");
     }
    
