@@ -10,6 +10,8 @@ public class inventoryManager : MonoBehaviour
 
     public Transform itemContent;
     public GameObject inventoryItem;
+    public Toggle enableRemove;
+    public inventoryItem[] inventoryItems;
     private void Awake() {
         Instance = this;
     }
@@ -34,9 +36,40 @@ public class inventoryManager : MonoBehaviour
             GameObject obj = Instantiate(inventoryItem, itemContent);
             var itemName = obj.transform.Find("Item/ItemName").GetComponent<Text>();
             var itemIcon = obj.transform.Find("Item/ItemIcon").GetComponent<Image>();
+            var removeButton = obj.transform.Find("removeButton").gameObject;
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
+
+            if (enableRemove.isOn)
+            {
+                removeButton.SetActive(true);
+            }
+        }
+        setInventoryItems();
+    }
+    public void EnableItemsRemove()
+    {
+        if (enableRemove.isOn)
+        {
+            foreach (Transform item in itemContent)
+            {
+                item.Find("removeButton").gameObject.SetActive(true);
+            }
+        }else
+        {
+            foreach (Transform item in itemContent)
+            {
+                item.Find("removeButton").gameObject.SetActive(false);
+            }
+        }
+    }
+    public void setInventoryItems()
+    {
+        inventoryItems = itemContent.GetComponentsInChildren<inventoryItem>();
+        for (int i = 0; i< items.Count; i++)
+        {
+            inventoryItems[i].AddItem(items[i]);
         }
     }
 }
