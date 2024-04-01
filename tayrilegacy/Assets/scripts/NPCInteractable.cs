@@ -6,7 +6,7 @@ using DialogueEditor;
 public class NPCInteractable : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField] private NPCConversation myConversation;
+  
     private Animator animator;
     private void Awake()
     {
@@ -14,8 +14,6 @@ public class NPCInteractable : MonoBehaviour
     }
     public void Interact()
     {
-        ConversationManager.Instance.StartConversation(myConversation);
-        animator.SetTrigger("talk");
     }
    
 }
