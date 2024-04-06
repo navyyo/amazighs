@@ -1,22 +1,57 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
-   
+    [SerializeField] private GameObject interactText;
+    [SerializeField] private float interactRange = 2f;
 
-    // Update is called once per frame
-    void Update()
+    private bool interacting = false;
+
+    private void Update()
     {
-       if (Input.GetKeyDown(KeyCode.E))
+        if (!interacting)
         {
-            float interactRange = 2f;
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-            foreach(Collider collider in colliderArray)
+
+            bool interactableInRange = false;
+
+            foreach (Collider collider in colliderArray)
             {
-               if(collider.TryGetComponent(out NPCInteractable npcInteractable)) { npcInteractable.Interact(); }
+                if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+                {
+                    interactableInRange = true;
+                    break;
+                }
             }
-        } 
+
+            interactText.SetActive(interactableInRange);
+
+            if (Input.GetKeyDown(KeyCode.E) && interactableInRange)
+            {
+                interacting = true;
+                InteractWithNPC(colliderArray);
+            }
+        }
+        else
+        {
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                interacting = false;
+                interactText.SetActive(false);
+            }
+        }
+    }
+
+    private void InteractWithNPC(Collider[] colliderArray)
+    {
+        foreach (Collider collider in colliderArray)
+        {
+            if (collider.TryGetComponent(out NPCInteractable npcInteractable))
+            {
+                npcInteractable.Interact();
+                break;
+            }
+        }
     }
 }
+
