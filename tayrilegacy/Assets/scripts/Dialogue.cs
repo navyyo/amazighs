@@ -80,12 +80,13 @@ public class Dialogue : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.E))
+        if (Input.GetKeyUp(KeyCode.F))
         {
             if (textComponent.text == lines[index])
             {
                 NextLine();
             }
+            
             else
             {
                 StopAllCoroutines();
