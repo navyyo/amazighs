@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerInteract : MonoBehaviour
 {
+    public static PlayerInteract Instance {  get; private set; }
     public event EventHandler <OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
     {
@@ -16,6 +17,13 @@ public class PlayerInteract : MonoBehaviour
     private ClearCounter selectedCounter;
 
     private bool interacting = false;
+    private void Awake()
+    { if(Instance != null)
+        {
+            Debug.Log("theres more than one player instance");
+        }
+        Instance = this;
+    }
 
     private void Start()
     {
