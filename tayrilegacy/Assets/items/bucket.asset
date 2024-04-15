@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d0d8b89c02e74494983a44ae37797468, type: 3}
-  m_Name: bottle
+  m_Name: bucket
   m_EditorClassIdentifier: 
-  id: 2
-  itemName: bottle
-  value: 5
-  icon: {fileID: 21300000, guid: a71325980e371444cb75e178430f2f81, type: 3}
+  id: 8
+  itemName: 
+  value: 0
+  icon: {fileID: 21300000, guid: 9d38662d010b5b24db8bac8053942262, type: 3}

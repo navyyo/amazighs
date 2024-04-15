@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d8b89c02e74494983a44ae37797468, type: 3}
   m_Name: cheese
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
+  id: 3
+  itemName: cheese
   value: 0
   icon: {fileID: 21300000, guid: c7a7ecf8f3e52284594419c0e53823b6, type: 3}

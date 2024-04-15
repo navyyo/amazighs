@@ -15,4 +15,4 @@ MonoBehaviour:
   id: 1
   itemName: cake
   value: 10
-  icon: {fileID: 21300000, guid: 4e91672c0a9122944b236cf1fa7a1e84, type: 3}
+  icon: {fileID: 21300000, guid: 53c734932d99d234891efdcd89a2839b, type: 3}
