@@ -8,7 +8,8 @@ public class ClearCounter : MonoBehaviour
 
 {
     [SerializeField] private KitchenObjectSO kitchenObjectSO;
-    [SerializeField] private Vector3 spawnPosition;
+    [SerializeField] private Transform counterTopPoint
+        ;
     private KitchenObject kitchenObject;
     [SerializeField] private ClearCounter secondClearCounter;
     [SerializeField] private bool testing;
@@ -28,13 +29,18 @@ public class ClearCounter : MonoBehaviour
     {
         if (kitchenObject == null)
         {
-            Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, spawnPosition, Quaternion.identity);
+            Transform kitchenObjectTransform = Instantiate(kitchenObjectSO.prefab, counterTopPoint);
+            kitchenObjectTransform.localPosition = Vector3.zero;
             kitchenObject = kitchenObjectTransform.GetComponent<KitchenObject>();
              kitchenObject.SetClearCounter(this);
          }
          else { Debug.Log(kitchenObject.GetClearCounter()); }
     }
   
-
+    public Transform GetKitchenObjectFollowTransform()
+    {
+        return counterTopPoint;
+    }
+    
 }
 
