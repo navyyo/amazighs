@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3357811816280587982}
+  - component: {fileID: 5298144566114191960}
   m_Layer: 0
   m_Name: meat
   m_TagString: Untagged
@@ -32,6 +33,20 @@ Transform:
   - {fileID: 8514752748443394929}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5298144566114191960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521927990596589918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b4e577979c3d3469217b92f627d215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  kitchenObjectSO: {fileID: 11400000, guid: c047dd1451fbeec448189edf5b8a06aa, type: 2}
+  clearCounter: {fileID: 0}
 --- !u!1001 &2980751740982538706
 PrefabInstance:
   m_ObjectHideFlags: 0
