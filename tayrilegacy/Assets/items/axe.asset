@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: axe
   m_EditorClassIdentifier: 
   id: 7
-  itemName: 
+  itemName: axe
   value: 0
   icon: {fileID: 21300000, guid: 2ab9465a7ba28004b92a708179f11dba, type: 3}
