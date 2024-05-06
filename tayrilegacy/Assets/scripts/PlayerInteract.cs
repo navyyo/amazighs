@@ -7,16 +7,17 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
     public event EventHandler <OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
     public class OnSelectedCounterChangedEventArgs : EventArgs
     {
-        public ClearCounter selectedCounter;
+        public BaseCounter selectedCounter;
     }
 
     [SerializeField] private GameInput gameInput;
     [SerializeField] private GameObject interactText;
     [SerializeField] private float interactRange = 2f;
     [SerializeField] private LayerMask countersLayerMask;
-    private ClearCounter selectedCounter;
+    private BaseCounter selectedCounter;
     [SerializeField] private Transform counterTopPoint;
     private KitchenObject kitchenObject;
+    [SerializeField] private Animator animator;
 
     private bool interacting = false;
     private void Awake()
@@ -34,7 +35,12 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e)
     {
-       if (selectedCounter != null) { selectedCounter.Connect(this); }
+       if (selectedCounter != null) { selectedCounter.Connect(this);
+            if (animator != null)
+            {
+                animator.SetBool("Pickupitem", true);
+            }
+        }
     }
 
     private void Update()
@@ -47,11 +53,11 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
     {
         if (Physics.Raycast(transform.position, transform.forward, out RaycastHit raycastHit, interactRange, countersLayerMask))
         {
-            if (raycastHit.transform.TryGetComponent(out ClearCounter clearCounter))
+            if (raycastHit.transform.TryGetComponent(out BaseCounter baseCounter))
             {
-                if(clearCounter != selectedCounter)
+                if(baseCounter != selectedCounter)
                 {
-                    SetSelectedCounter(clearCounter);
+                    SetSelectedCounter(baseCounter);
                 }
                 
             }else {
@@ -108,7 +114,7 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
             }
         }
     }
-    private void SetSelectedCounter( ClearCounter selectedCounter)
+    private void SetSelectedCounter( BaseCounter selectedCounter)
     {
         this.selectedCounter = selectedCounter;
         OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventArgs { selectedCounter = selectedCounter });
