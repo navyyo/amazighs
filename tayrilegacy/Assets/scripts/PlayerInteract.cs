@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class PlayerInteract : MonoBehaviour
+public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
 {
     public static PlayerInteract Instance {  get; private set; }
     public event EventHandler <OnSelectedCounterChangedEventArgs> OnSelectedCounterChanged;
@@ -15,6 +15,8 @@ public class PlayerInteract : MonoBehaviour
     [SerializeField] private float interactRange = 2f;
     [SerializeField] private LayerMask countersLayerMask;
     private ClearCounter selectedCounter;
+    [SerializeField] private Transform counterTopPoint;
+    private KitchenObject kitchenObject;
 
     private bool interacting = false;
     private void Awake()
@@ -32,7 +34,7 @@ public class PlayerInteract : MonoBehaviour
 
     private void GameInput_OnInteractAction(object sender, System.EventArgs e)
     {
-       if (selectedCounter != null) { selectedCounter.Connect(); }
+       if (selectedCounter != null) { selectedCounter.Connect(this); }
     }
 
     private void Update()
@@ -110,6 +112,23 @@ public class PlayerInteract : MonoBehaviour
     {
         this.selectedCounter = selectedCounter;
         OnSelectedCounterChanged?.Invoke(this, new OnSelectedCounterChangedEventArgs { selectedCounter = selectedCounter });
+    }
+    public Transform GetKitchenObjectFollowTransform()
+    {
+        return counterTopPoint;
+    }
+    public void SetKitchenObject(KitchenObject kitchenObject)
+    {
+        this.kitchenObject = kitchenObject;
+    }
+    public KitchenObject GetKitchenObject() { return kitchenObject; }
+    public void ClearKitchenObject()
+    {
+        kitchenObject = null;
+    }
+    public bool HasKitchenObject()
+    {
+        return kitchenObject != null;
     }
 }
 
