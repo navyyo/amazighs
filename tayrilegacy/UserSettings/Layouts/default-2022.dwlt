@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Inspector
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -145,7 +145,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 2252
+  controlID: 128
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 2253
+  controlID: 83
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 2254
+  controlID: 84
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -439,10 +439,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 247.6}
-      m_SelectedIDs: fae8fbff
-      m_LastClickedID: -268038
-      m_ExpandedIDs: e6f5fbff0cfdfbff140bfcff5c65fdff0e72fdffdc57ffffa8eeffff527d0000987d000010f403003af403007cf6030054f903005ef90300
+      scrollPos: {x: 0, y: 41.100006}
+      m_SelectedIDs: 0a770000
+      m_LastClickedID: 30474
+      m_ExpandedIDs: e0faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -823,9 +823,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 96.09745, y: 26.15016, z: -18.035378}
+    m_Target: {x: 79.16348, y: 27.366392, z: -25.278246}
     speed: 2
-    m_Value: {x: 96.09745, y: 26.15016, z: -18.035378}
+    m_Value: {x: 79.1635, y: 27.366392, z: -25.27824}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -875,9 +875,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.08469171, y: -0.223139, z: 0.01946463, w: -0.97090554}
   m_Size:
-    m_Target: 0.6267678
+    m_Target: 10
     speed: 2
-    m_Value: 0.6267678
+    m_Value: 9.999991
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -948,7 +948,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/scripts/languageSystem
+    - Assets
     m_Globs: []
     m_OriginalText: 
     m_ImportLogFlags: 0
@@ -956,16 +956,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 49
   m_LastFolders:
-  - Assets/scripts/languageSystem
+  - Assets
   m_LastFoldersGridSize: 49
   m_LastProjectPath: C:\Users\GIGABYTE\amazighs\tayrilegacy
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 712.6}
-    m_SelectedIDs: 64eb0300
-    m_LastClickedID: 256868
-    m_ExpandedIDs: 00000000706d0000846d00008c6d0000a06d0000bc110100be110100c0110100c2110100c4110100c6110100c8110100401401004e14010000ca9a3b
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: 5e0c0100
+    m_LastClickedID: 68702
+    m_ExpandedIDs: 000000005e0c0100600c0100620c0100640c0100660c0100680c01006a0c0100700f0100860f010000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -993,7 +993,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bc110100be110100c0110100c2110100c4110100c6110100c8110100
+    m_ExpandedIDs: 000000005e0c0100600c0100620c0100640c0100660c0100680c01006a0c0100
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1018,8 +1018,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: fae8fbff
-    m_LastClickedInstanceID: -268038
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300004c2406006e240100
     m_RenameOverlay:
