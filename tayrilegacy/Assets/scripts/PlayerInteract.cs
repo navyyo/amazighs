@@ -66,7 +66,7 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
         } else {
             SetSelectedCounter(null);
         }
-
+        
        
     }
     private void InteractByConversation() {
@@ -124,7 +124,7 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
         return counterTopPoint;
     }
     public void SetKitchenObject(KitchenObject kitchenObject)
-    {
+    {   
         this.kitchenObject = kitchenObject;
     }
     public KitchenObject GetKitchenObject() { return kitchenObject; }
@@ -133,8 +133,9 @@ public class PlayerInteract : MonoBehaviour , IKitchenObjectParent
         kitchenObject = null;
     }
     public bool HasKitchenObject()
-    {
+    {  
         return kitchenObject != null;
     }
+    
 }
 
