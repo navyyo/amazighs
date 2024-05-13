@@ -5,9 +5,9 @@ using UnityEngine;
 public class BaseCounter : MonoBehaviour , IKitchenObjectParent
 {
     
-    [SerializeField] private Transform counterTopPoint;
+    public Transform counterTopPoint;
 
-    private KitchenObject kitchenObject;
+    protected KitchenObject kitchenObject;
     public virtual void Connect(PlayerInteract player) { }
     public Transform GetKitchenObjectFollowTransform()
     {
