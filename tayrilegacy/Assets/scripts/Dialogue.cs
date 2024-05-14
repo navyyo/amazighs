@@ -6,6 +6,8 @@ using TMPro;
 
 public class Dialogue : MonoBehaviour
 {
+    public delegate void DialogueEndAction();
+    public event DialogueEndAction OnDialogueEnd;
     public TextMeshProUGUI textComponent;
     public Image imageComponent; // Using UnityEngine.UI.Image for displaying images
     public string[] lines;
@@ -63,6 +65,7 @@ public class Dialogue : MonoBehaviour
         else
         {
             gameObject.SetActive(false); // Deactivate the dialogue panel when dialogue ends
+            OnDialogueEnd?.Invoke(); // Trigger the event when the dialogue ends
         }
     }
 
